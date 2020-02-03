@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,12 @@ public class ExamGenerator : MonoBehaviour
     public GameObject Prefab5;
     void Start()
     {
+        ExamGenerate();
+    }
+
+
+
+    void ExamGenerate(){
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
