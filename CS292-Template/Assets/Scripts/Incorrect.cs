@@ -15,7 +15,6 @@ public class Incorrect : MonoBehaviour
     // Start is called before the first frame update
     public void ButtonPress()
     {
-        Global.counters++;
         if (Global.counters == 1)
         {
             Instantiate(IncorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
@@ -36,6 +35,7 @@ public class Incorrect : MonoBehaviour
         {
             Instantiate(IncorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
         }
+        Global.counters++;
     }
 
     // Update is called once per frame
