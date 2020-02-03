@@ -12,11 +12,10 @@ public class Correct : MonoBehaviour
     public GameObject CorrectPrefab;
     public class Global
     {
-        public static int counters;
+        public static int counters = 1;
     }
     public void ButtonPress()
     {
-        Global.counters++;
         if (Global.counters == 1)
         {
             Instantiate(CorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
@@ -37,6 +36,7 @@ public class Correct : MonoBehaviour
         {
             Instantiate(CorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
         }
+        Global.counters++;
     }
 
     // Update is called once per frame
