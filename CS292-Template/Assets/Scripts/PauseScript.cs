@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour
     public GameObject TitleMenu;
     public GameObject pauseMenu;
     public bool isPaused;
+    public TimerController time;
     
     
         
@@ -17,7 +18,7 @@ public class PauseScript : MonoBehaviour
     {
         TitleMenu.SetActive(true);
         pauseMenu.SetActive(false);
-        isPaused = false;
+        isPaused = true;
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class PauseScript : MonoBehaviour
     }
     public void PauseGame()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         TitleMenu.SetActive(false);
   
@@ -38,7 +39,7 @@ public class PauseScript : MonoBehaviour
 
     public void ContinueGame()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         pauseMenu.SetActive(false);
         isPaused = false;
     }
@@ -47,7 +48,7 @@ public class PauseScript : MonoBehaviour
     {
         //GameObject a = GameObject.Find("Title Screen").GetComponent<TitleScript>().GetT();
         
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         pauseMenu.SetActive(false);
         isPaused = false;
         TitleMenu.SetActive(true);
@@ -57,7 +58,7 @@ public class PauseScript : MonoBehaviour
 
     public void PlayGame()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;

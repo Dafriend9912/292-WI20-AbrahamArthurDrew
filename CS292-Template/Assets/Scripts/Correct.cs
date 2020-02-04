@@ -15,7 +15,7 @@ public class Correct : MonoBehaviour
         public static int counters = 1;
         public static bool destroy = false;
         public static int destroyCounters = 0;
-        public static int countdown = 30;
+        public static int countdown = 5;
     }
     public void ButtonPress()
     {

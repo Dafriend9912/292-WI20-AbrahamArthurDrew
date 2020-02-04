@@ -24,13 +24,15 @@ public class ResultsMenu : MonoBehaviour
     void Start()
     {
         highestScore = 1000000;
+        resultsScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!timer.active)
+        if (timer.done)
         {
+            resultsScreen.SetActive(true);
             Score = timer.time;
             timeTaken.text = ((int)Score / 60) + ":" + ((int)Score % 60);
             timeAdded.text = (wrongs).ToString();
@@ -54,18 +56,30 @@ public class ResultsMenu : MonoBehaviour
             }
         }
     }
-    private void OnMouseUp()
+    public void getResults()
     {
-        if (this.gameObject == Exit)
+        resultsScreen.SetActive(true);
+        Score = timer.time;
+        timeTaken.text = ((int)Score / 60) + ":" + ((int)Score % 60);
+        timeAdded.text = (wrongs).ToString();
+        Score = Score + wrongs;
+        timeFinal.text = ((int)Score / 60) + ":" + ((int)Score % 60);
+        if (first)
         {
-            resultsScreen.SetActive(false);
-            titleScreen.SetActive(true);
-            timer.active = false;
-        }
-        else
-        {
-            resultsScreen.SetActive(false);
-            timer.active = true;
+            if (highestScore > Score)
+            {
+                HiScore.text = ((int)Score / 60) + ":" + ((int)Score % 60);
+                HiScoreText.text = "NEW HI-SCORE:";
+                highestScore = Score;
+                first = false;
+            }
+            else
+            {
+                HiScore.text = ((int)highestScore / 60) + ":" + ((int)highestScore % 60);
+                HiScoreText.text = "Hi-Score:";
+                first = false;
+            }
         }
     }
+
 }
