@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Correct;
 
 public class TimerController : MonoBehaviour
 {
@@ -10,7 +9,6 @@ public class TimerController : MonoBehaviour
     private float Starttime;
     public float time;
     public bool active = false;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +19,7 @@ public class TimerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Global.countdown == 0)
-        {
-            active = false;
-        }
-        if(active && !paused)
+        if(active)
         {
             time += Time.deltaTime;
             string minutes = ((int)time / 60).ToString();

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Correct;
 
 public class ResultsMenu : MonoBehaviour
 {
@@ -16,10 +15,6 @@ public class ResultsMenu : MonoBehaviour
     public TimerController timer;
     public int wrongs = 0;
     public bool first = true;
-    public GameObject playAgain;
-    public GameObject Exit;
-    public GameObject titleScreen;
-    public GameObject resultsScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -53,20 +48,6 @@ public class ResultsMenu : MonoBehaviour
                     first = false;
                 }
             }
-        }
-    }
-    private void OnMouseUp()
-    {
-        if (this.gameObject == Exit)
-        {
-            resultsScreen.SetActive(false);
-            titleScreen.SetActive(true);
-            timer.active = false;
-        }
-        else
-        {
-            resultsScreen.SetActive(false);
-            timer.active = true;
         }
     }
 }
