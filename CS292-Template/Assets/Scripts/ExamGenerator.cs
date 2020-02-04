@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Correct;
 
 public class ExamGenerator : MonoBehaviour
 {
@@ -17,6 +19,25 @@ public class ExamGenerator : MonoBehaviour
     public GameObject Prefab5;
     void Start()
     {
+        ExamGenerate();
+    }
+
+    private void Update()
+    {
+        if(Global.destroy == true && Global.destroyCounters == 10)
+        {
+            Global.destroy = false;
+            Global.counters = 1;
+            Global.destroyCounters = 0;
+            ExamGenerate();
+            Global.countdown--;
+        }
+    }
+
+
+
+
+    public void ExamGenerate(){
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
