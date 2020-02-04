@@ -24,6 +24,7 @@ public class ResultsMenu : MonoBehaviour
     void Start()
     {
         highestScore = 1000000;
+        resultsScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class ResultsMenu : MonoBehaviour
     {
         if (!timer.active)
         {
+            resultsScreen.SetActive(true);
             Score = timer.time;
             timeTaken.text = ((int)Score / 60) + ":" + ((int)Score % 60);
             timeAdded.text = (wrongs).ToString();
@@ -54,18 +56,5 @@ public class ResultsMenu : MonoBehaviour
             }
         }
     }
-    private void OnMouseUp()
-    {
-        if (this.gameObject == Exit)
-        {
-            resultsScreen.SetActive(false);
-            titleScreen.SetActive(true);
-            timer.active = false;
-        }
-        else
-        {
-            resultsScreen.SetActive(false);
-            timer.active = true;
-        }
-    }
+
 }

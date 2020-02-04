@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour
     public GameObject TitleMenu;
     public GameObject pauseMenu;
     public bool isPaused;
+    public TimerController time;
     
     
         
@@ -17,7 +18,7 @@ public class PauseScript : MonoBehaviour
     {
         TitleMenu.SetActive(true);
         pauseMenu.SetActive(false);
-        isPaused = false;
+        isPaused = true;
     }
 
     // Update is called once per frame
@@ -61,6 +62,7 @@ public class PauseScript : MonoBehaviour
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;
+        time.active = true;
     }
 
 

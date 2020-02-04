@@ -28,6 +28,7 @@ public class ResultsButton : MonoBehaviour
             resultsScreen.SetActive(false);
             titleScreen.SetActive(true);
             timer.active = false;
+            timer.pause.isPaused = true;
         }
         else
         {
