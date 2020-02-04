@@ -30,6 +30,7 @@ public class ExamGenerator : MonoBehaviour
             Global.counters = 1;
             Global.destroyCounters = 0;
             ExamGenerate();
+            Global.countdown--;
         }
     }
 

@@ -15,6 +15,7 @@ public class Correct : MonoBehaviour
         public static int counters = 1;
         public static bool destroy = false;
         public static int destroyCounters = 0;
+        public static int countdown = 30;
     }
     public void ButtonPress()
     {
@@ -39,7 +40,6 @@ public class Correct : MonoBehaviour
             Instantiate(CorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
         }
         Global.counters++;
-        Debug.Log(Global.counters);
     }
 
     // Update is called once per frame

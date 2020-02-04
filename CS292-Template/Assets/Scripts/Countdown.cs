@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static Correct;
+using UnityEngine.UI;
 
-public class Destroyer : MonoBehaviour
+public class Countdown : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,14 +12,11 @@ public class Destroyer : MonoBehaviour
         
     }
 
+    public Text numLeft; 
+
     // Update is called once per frame
     void Update()
     {
-        if(Global.counters == 6)
-        {
-            Destroy(gameObject);
-            Global.destroy = true;
-            Global.destroyCounters++;
-        }
+        numLeft.text = Global.countdown.ToString();
     }
 }
