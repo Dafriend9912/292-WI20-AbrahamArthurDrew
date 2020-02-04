@@ -29,6 +29,7 @@ public class ExamGenerator : MonoBehaviour
             Global.destroy = false;
             Global.counters = 1;
             Global.destroyCounters = 0;
+            Global.examAnswers.Clear();
             ExamGenerate();
             Global.countdown--;
         }
@@ -50,22 +51,27 @@ public class ExamGenerator : MonoBehaviour
             if (i == 0)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition1.position, SpawnPosition1.rotation);
+                Global.examAnswers.Add(prefabIndex);
             }
             if (i == 1)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition2.position, SpawnPosition2.rotation);
+                Global.examAnswers.Add(prefabIndex);
             }
             if (i == 2)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition3.position, SpawnPosition3.rotation);
+                Global.examAnswers.Add(prefabIndex);
             }
             if (i == 3)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition4.position, SpawnPosition4.rotation);
+                Global.examAnswers.Add(prefabIndex);
             }
             if (i == 4)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition5.position, SpawnPosition5.rotation);
+                Global.examAnswers.Add(prefabIndex);
             }
         }
     }
