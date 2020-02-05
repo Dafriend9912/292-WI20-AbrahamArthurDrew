@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Correct;
 
 public class KeyGenerator : MonoBehaviour
 {
@@ -29,22 +30,31 @@ public class KeyGenerator : MonoBehaviour
             if (i == 0)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition1.position, SpawnPosition1.rotation);
+                Global.answerKeys.Add(prefabIndex);
             }
             if (i == 1)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition2.position, SpawnPosition2.rotation);
+                Global.answerKeys.Add(prefabIndex);
+
             }
             if (i == 2)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition3.position, SpawnPosition3.rotation);
+                Global.answerKeys.Add(prefabIndex);
+
             }
             if (i == 3)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition4.position, SpawnPosition4.rotation);
+                Global.answerKeys.Add(prefabIndex);
+
             }
             if (i == 4)
             {
                 Instantiate(prefabList[prefabIndex], SpawnPosition5.position, SpawnPosition5.rotation);
+                Global.answerKeys.Add(prefabIndex);
+
             }
         }
 
