@@ -16,28 +16,51 @@ public class Correct : MonoBehaviour
         public static bool destroy = false;
         public static int destroyCounters = 0;
         public static int countdown = 30;
+        public static List<int> answerKeys = new List<int>(5);
+        public static List<int> examAnswers = new List<int>(5);
+        public static int incorrectCounter = 0;
     }
     public void ButtonPress()
     {
         if (Global.counters == 1)
         {
             Instantiate(CorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
+            if (Global.examAnswers[0] != Global.answerKeys[0])
+            {
+                Global.incorrectCounter++;
+            }
         }
         if (Global.counters == 2)
         {
             Instantiate(CorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
+            if (Global.examAnswers[1] != Global.answerKeys[1])
+            {
+                Global.incorrectCounter++;
+            }
         }
         if (Global.counters == 3)
         {
             Instantiate(CorrectPrefab, SpawnPosition3.position, SpawnPosition3.rotation);
+            if (Global.examAnswers[2] != Global.answerKeys[2])
+            {
+                Global.incorrectCounter++;
+            }
         }
         if (Global.counters == 4)
         {
             Instantiate(CorrectPrefab, SpawnPosition4.position, SpawnPosition4.rotation);
+            if (Global.examAnswers[3] != Global.answerKeys[3])
+            {
+                Global.incorrectCounter++;
+            }
         }
         if (Global.counters == 5)
         {
             Instantiate(CorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
+            if (Global.examAnswers[4] != Global.answerKeys[4])
+            {
+                Global.incorrectCounter++;
+            }
         }
         Global.counters++;
     }
