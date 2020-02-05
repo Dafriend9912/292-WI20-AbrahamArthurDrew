@@ -62,7 +62,7 @@ public class PauseScript : MonoBehaviour
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;
-        time.active = true;
+        time.done = false;
     }
 
 

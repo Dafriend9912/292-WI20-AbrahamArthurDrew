@@ -16,8 +16,7 @@ public class TimerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Starttime = Time.time;
-        active = false;
+        time = 60;
     }
 
     // Update is called once per frame
@@ -25,11 +24,7 @@ public class TimerController : MonoBehaviour
     {
         if (!pause.isPaused && !done)
         {
-            active = true;
-        }
-        if(active && Global.countdown != 0)
-        {
-            time += Time.deltaTime;
+            time -= Time.deltaTime;
             string minutes = ((int)time / 60).ToString();
             string seconds = (time % 60).ToString("F0");
             timetext.text = minutes + ":" + seconds;
