@@ -30,26 +30,27 @@ public class PauseScript : MonoBehaviour
     }
     public void PauseGame()
     {
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         TitleMenu.SetActive(false);
   
         isPaused = true;
+        time.active = false;
     }
 
     public void ContinueGame()
     {
-        //Time.timeScale = 0f;
+        Time.timeScale = 1f;
         pauseMenu.SetActive(false);
-        TitleMenu.SetActive(false);
         isPaused = false;
+        time.active = true;
     }
 
     public void Exit()
     {
         //GameObject a = GameObject.Find("Title Screen").GetComponent<TitleScript>().GetT();
         
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
         pauseMenu.SetActive(false);
         isPaused = false;
         TitleMenu.SetActive(true);
@@ -59,10 +60,12 @@ public class PauseScript : MonoBehaviour
 
     public void PlayGame()
     {
-        //Time.timeScale = 0f;
+        Time.timeScale = 1f;
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;
+        time.done = false;
+        time.active = true;
     }
 
 

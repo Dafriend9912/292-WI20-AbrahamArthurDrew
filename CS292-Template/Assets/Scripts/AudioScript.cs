@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResultsButton : MonoBehaviour
-{
-    public GameObject playAgain;
-    public GameObject Exit;
-    public GameObject titleScreen;
-    public GameObject resultsScreen;
-    public TimerController timer;
 
+public class AudioScript : MonoBehaviour
+{
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +17,12 @@ public class ResultsButton : MonoBehaviour
     {
         
     }
-    
-}
+
+    public void mute()
+    {
+        AudioListener.pause = !AudioListener.pause;
+    }
+
+   
+   
+    }

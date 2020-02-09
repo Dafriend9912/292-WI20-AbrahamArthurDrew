@@ -12,34 +12,34 @@ public class TimerController : MonoBehaviour
     public PauseScript pause;
     public bool active;
     public bool done;
-    public ResultsMenu res;
+    public ResultsMenu Results;
 
     // Start is called before the first frame update
     void Start()
     {
-        Starttime = Time.time;
+        time = 5f;
+        done = false;
+        active = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!pause.isPaused)
+        if (pause.isPaused == false && !done)
         {
-            active = true;
+            time -= Time.deltaTime;
+            timetext.text = time.ToString("F0");
+            if (time <= 0)
+            {
+                done = true;
+                active = false;
+                Global.counters = 6;
+                Results.Resultsactive();
+            }
         }
-        if (active)
+        else if (pause.isPaused == true)
         {
-            time += Time.deltaTime;
-            string minutes = ((int)time / 60).ToString();
-            string seconds = (time % 60).ToString("F0");
-            timetext.text = minutes + ":" + seconds;
-        }
-        if(Global.countdown == 0)
-        {
-            active = false;
-            done = true;
-            pause.isPaused = true;
-            res.getResults();
+
         }
 
     }
