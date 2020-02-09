@@ -1,15 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Correct;
 
-public class ResultsButton : MonoBehaviour
+
+public class KeyDestroyer : MonoBehaviour
 {
-    public GameObject playAgain;
-    public GameObject Exit;
-    public GameObject titleScreen;
-    public GameObject resultsScreen;
-    public TimerController timer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +15,10 @@ public class ResultsButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Global.totalDestroyer == true)
+        {
+            Global.keyDestroyCount++;
+            Destroy(gameObject);
+        }
     }
-    
 }

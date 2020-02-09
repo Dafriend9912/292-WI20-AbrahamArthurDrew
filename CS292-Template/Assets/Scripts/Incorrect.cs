@@ -11,6 +11,7 @@ public class Incorrect : MonoBehaviour
     public Transform SpawnPosition4;
     public Transform SpawnPosition5;
     public GameObject IncorrectPrefab;
+    public TimerController time;
     
     // Start is called before the first frame update
     public void ButtonPress()
@@ -21,6 +22,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 2)
@@ -29,6 +31,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 3)
@@ -37,6 +40,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 4)
@@ -45,6 +49,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 5)
@@ -53,6 +58,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         Global.counters++;

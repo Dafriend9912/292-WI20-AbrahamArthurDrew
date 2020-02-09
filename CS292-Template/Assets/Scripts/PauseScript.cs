@@ -35,13 +35,15 @@ public class PauseScript : MonoBehaviour
         TitleMenu.SetActive(false);
   
         isPaused = true;
+        time.active = false;
     }
 
     public void ContinueGame()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         isPaused = false;
+        time.active = true;
     }
 
     public void Exit()
@@ -58,11 +60,12 @@ public class PauseScript : MonoBehaviour
 
     public void PlayGame()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;
         time.done = false;
+        time.active = true;
     }
 
 

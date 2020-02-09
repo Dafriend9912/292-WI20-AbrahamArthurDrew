@@ -10,15 +10,18 @@ public class Correct : MonoBehaviour
     public Transform SpawnPosition4;
     public Transform SpawnPosition5;
     public GameObject CorrectPrefab;
+    public TimerController time;
     public class Global
     {
         public static int counters = 1;
         public static bool destroy = false;
         public static int destroyCounters = 0;
-        public static int countdown = 30;
+        public static int countdown = 0;
         public static List<int> answerKeys = new List<int>(5);
         public static List<int> examAnswers = new List<int>(5);
         public static int incorrectCounter = 0;
+        public static bool totalDestroyer = false;
+        public static int keyDestroyCount = 0;
     }
     public void ButtonPress()
     {
@@ -28,6 +31,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[0] != Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 2)
@@ -35,6 +39,7 @@ public class Correct : MonoBehaviour
             Instantiate(CorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
             if (Global.examAnswers[1] != Global.answerKeys[1])
             {
+                time.time -= 1;
                 Global.incorrectCounter++;
             }
         }
@@ -44,6 +49,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[2] != Global.answerKeys[2])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 4)
@@ -52,6 +58,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[3] != Global.answerKeys[3])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         if (Global.counters == 5)
@@ -60,6 +67,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[4] != Global.answerKeys[4])
             {
                 Global.incorrectCounter++;
+                time.time -= 1;
             }
         }
         Global.counters++;
