@@ -11,6 +11,7 @@ public class Correct : MonoBehaviour
     public Transform SpawnPosition5;
     public GameObject CorrectPrefab;
     public TimerController time;
+    public AudioScript Audioplayer;
     public class Global
     {
         public static int counters = 1;
@@ -22,6 +23,7 @@ public class Correct : MonoBehaviour
         public static int incorrectCounter = 0;
         public static bool totalDestroyer = false;
         public static int keyDestroyCount = 0;
+        public static bool incorrect = false;
     }
     public void ButtonPress()
     {
@@ -32,6 +34,13 @@ public class Correct : MonoBehaviour
             {
                 Global.incorrectCounter++;
                 time.time -= 1;
+                Global.incorrect = true;
+                Audioplayer.errorSound();
+
+            }
+            else
+            {
+                Audioplayer.correctSound();
             }
         }
         if (Global.counters == 2)
@@ -41,6 +50,13 @@ public class Correct : MonoBehaviour
             {
                 time.time -= 1;
                 Global.incorrectCounter++;
+                Global.incorrect = true;
+                Audioplayer.errorSound();
+
+            }
+            else
+            {
+                Audioplayer.correctSound();
             }
         }
         if (Global.counters == 3)
@@ -50,6 +66,13 @@ public class Correct : MonoBehaviour
             {
                 Global.incorrectCounter++;
                 time.time -= 1;
+                Global.incorrect = true;
+                Audioplayer.errorSound();
+
+            }
+            else
+            {
+                Audioplayer.correctSound();
             }
         }
         if (Global.counters == 4)
@@ -59,6 +82,13 @@ public class Correct : MonoBehaviour
             {
                 Global.incorrectCounter++;
                 time.time -= 1;
+                Global.incorrect = true;
+                Audioplayer.errorSound();
+
+            }
+            else
+            {
+                Audioplayer.correctSound();
             }
         }
         if (Global.counters == 5)
@@ -68,6 +98,13 @@ public class Correct : MonoBehaviour
             {
                 Global.incorrectCounter++;
                 time.time -= 1;
+                Global.incorrect = true;
+                Audioplayer.errorSound();
+
+            }
+            else
+            {
+                Audioplayer.correctSound();
             }
         }
         Global.counters++;

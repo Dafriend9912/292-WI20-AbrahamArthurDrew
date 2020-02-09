@@ -9,7 +9,7 @@ public class PauseScript : MonoBehaviour
     public GameObject pauseMenu;
     public bool isPaused;
     public TimerController time;
-    
+    public AudioScript audio;
     
         
 
@@ -17,6 +17,7 @@ public class PauseScript : MonoBehaviour
     void Start()
     {
         TitleMenu.SetActive(true);
+        audio.playTitleAudio();
         pauseMenu.SetActive(false);
         isPaused = true;
     }
@@ -66,6 +67,8 @@ public class PauseScript : MonoBehaviour
         isPaused = false;
         time.done = false;
         time.active = true;
+        audio.playGamePlayAudio();
+
     }
 
 
