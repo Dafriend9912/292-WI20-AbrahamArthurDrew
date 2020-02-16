@@ -32,7 +32,7 @@ public class ExamGenerator : MonoBehaviour
             Global.destroyCounters = 0;
             Global.examAnswers.Clear();
             ExamGenerate();
-            Global.countdown--;
+            Global.countdown++;
         }
     }
 
