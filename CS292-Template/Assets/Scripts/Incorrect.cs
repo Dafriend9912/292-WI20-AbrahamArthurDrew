@@ -24,7 +24,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[0] == Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Audioplayer.errorSound();
             }
             else
@@ -38,7 +38,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[1] == Global.answerKeys[1])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Audioplayer.errorSound();
 
             }
@@ -53,7 +53,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[2] == Global.answerKeys[2])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Audioplayer.errorSound();
 
             }
@@ -68,7 +68,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[3] == Global.answerKeys[3])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Audioplayer.errorSound();
 
             }
@@ -83,7 +83,7 @@ public class Incorrect : MonoBehaviour
             if (Global.examAnswers[4] == Global.answerKeys[4])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Audioplayer.errorSound();
 
             }

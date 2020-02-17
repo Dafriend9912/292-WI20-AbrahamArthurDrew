@@ -6,6 +6,7 @@ using static Correct;
 
 public class KeyDestroyer : MonoBehaviour
 {
+    public KeyGenerator key;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,14 @@ public class KeyDestroyer : MonoBehaviour
         {
             Global.keyDestroyCount++;
             Destroy(gameObject);
+            if(Global.keyDestroyCount == 5)
+            {
+                Global.keyDestroyDone = true;
+            }
         }
+    }
+    public void Dest()
+    {
+        Destroy(gameObject);
     }
 }

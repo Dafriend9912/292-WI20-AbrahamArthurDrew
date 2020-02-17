@@ -24,6 +24,7 @@ public class Correct : MonoBehaviour
         public static bool totalDestroyer = false;
         public static int keyDestroyCount = 0;
         public static bool incorrect = false;
+        public static bool keyDestroyDone = false;
     }
     public void ButtonPress()
     {
@@ -33,7 +34,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[0] != Global.answerKeys[0])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Global.incorrect = true;
                 Audioplayer.errorSound();
 
@@ -48,7 +49,7 @@ public class Correct : MonoBehaviour
             Instantiate(CorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
             if (Global.examAnswers[1] != Global.answerKeys[1])
             {
-                time.time -= 1;
+                time.time -= 2;
                 Global.incorrectCounter++;
                 Global.incorrect = true;
                 Audioplayer.errorSound();
@@ -65,7 +66,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[2] != Global.answerKeys[2])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Global.incorrect = true;
                 Audioplayer.errorSound();
 
@@ -81,7 +82,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[3] != Global.answerKeys[3])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Global.incorrect = true;
                 Audioplayer.errorSound();
 
@@ -97,7 +98,7 @@ public class Correct : MonoBehaviour
             if (Global.examAnswers[4] != Global.answerKeys[4])
             {
                 Global.incorrectCounter++;
-                time.time -= 1;
+                time.time -= 2;
                 Global.incorrect = true;
                 Audioplayer.errorSound();
 
