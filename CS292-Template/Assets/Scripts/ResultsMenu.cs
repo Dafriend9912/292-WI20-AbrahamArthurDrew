@@ -34,7 +34,7 @@ public class ResultsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highestScore = 0;
+        highestScore = PlayerPrefs.GetFloat("HI-SCORE");
         resultsScreen.SetActive(false);
         Destroy1 = Prefab1.GetComponent<KeyDestroyer>();
         Destroy2 = Prefab2.GetComponent<KeyDestroyer>();
@@ -61,6 +61,7 @@ public class ResultsMenu : MonoBehaviour
                     HiScoreText.text = "NEW HI-SCORE:";
                     highestScore = Score;
                     first = false;
+                    PlayerPrefs.SetFloat("HI-SCORE", highestScore);
                 }
                 else
                 {
