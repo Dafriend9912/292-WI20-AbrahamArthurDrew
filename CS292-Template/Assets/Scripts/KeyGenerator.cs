@@ -18,9 +18,8 @@ public class KeyGenerator : MonoBehaviour
     public GameObject Prefab5;
     void Start()
     {
-        keyGenerate();
     }
-    public void keyGenerate() { 
+    public void keyGenerate() {
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
@@ -64,10 +63,12 @@ public class KeyGenerator : MonoBehaviour
     }
     private void Update()
     {
-        if(Global.totalDestroyer == true && Global.keyDestroyCount == 5)
+        if (Global.keyDestroyDone)
         {
-            keyGenerate();
             Global.totalDestroyer = false;
+            Global.keyDestroyDone = false;
+            Global.keyDestroyCount = 0;
+            print("worked");
         }
     }
 }

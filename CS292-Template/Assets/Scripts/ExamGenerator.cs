@@ -19,8 +19,7 @@ public class ExamGenerator : MonoBehaviour
     public GameObject Prefab5;
     public int AnswerSkew = 80;
     void Start()
-    {
-        ExamGenerate();
+    { 
     }
 
     private void Update()
@@ -40,6 +39,7 @@ public class ExamGenerator : MonoBehaviour
 
 
     public void ExamGenerate(){
+        Global.counters = 1;
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
