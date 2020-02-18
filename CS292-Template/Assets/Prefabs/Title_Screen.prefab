@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7592453436325460904}
   - component: {fileID: 7570611731728536835}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SFX Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 1091362246458906583}
   - component: {fileID: 2875274246701515118}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 1377506212080445153}
   - component: {fileID: 7095559865825193343}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 5847464581294029677}
   - component: {fileID: 4713454850444259173}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Music Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

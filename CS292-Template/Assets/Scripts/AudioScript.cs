@@ -13,6 +13,7 @@ public class AudioScript : MonoBehaviour
     public AudioClip titleAudio;
     public AudioSource audio;
     public AudioClip gamePlayAudio;
+    public bool MuteSfx = false;
     //public Button CorrectButton;    // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +31,29 @@ public class AudioScript : MonoBehaviour
         AudioListener.pause = !AudioListener.pause;
     }
 
+    public void muteSfx()
+    {
+        if (MuteSfx == false)
+        {
+            MuteSfx = true;
+        }else
+        {
+            MuteSfx = false;
+        }
+    }
     public void errorSound()
     {
+        if (!MuteSfx)
             audio.PlayOneShot(incorrectAudio);
     }
     public void correctSound()
     {
-        audio.PlayOneShot(correctAudio);
+        if (!MuteSfx)
+            audio.PlayOneShot(correctAudio);
     }
     public void playTitleAudio()
     {
-        
-            audio.PlayOneShot(titleAudio);
-        
-        
+               audio.PlayOneShot(titleAudio);  
     }
 
     public void playGamePlayAudio()
