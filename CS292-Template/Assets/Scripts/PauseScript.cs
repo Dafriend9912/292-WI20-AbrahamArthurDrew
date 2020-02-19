@@ -57,15 +57,17 @@ public class PauseScript : MonoBehaviour
     {
         //GameObject a = GameObject.Find("Title Screen").GetComponent<TitleScript>().GetT();
 
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         pauseMenu.SetActive(false);
-        isPaused = false;
+        isPaused = true;
+        time.active = false;
         TitleMenu.SetActive(true);
         time.time = 60;
         Global.destroy = true;
-        Global.destroyCounters = 10;
+        Global.counters = 6;
+        Global.destroyCounters = 0;
         Global.totalDestroyer = true;
-        Global.countdown = -1;
+        Global.countdown = 0;
 
     }
 
@@ -78,6 +80,8 @@ public class PauseScript : MonoBehaviour
         time.done = false;
         time.active = true;
         audio.playGamePlayAudio();
+        Global.counters = 1;
+        Global.destroyCounters = 0;
         keys.keyGenerate();
         exam.ExamGenerate();
 
