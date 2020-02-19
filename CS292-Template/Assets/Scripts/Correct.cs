@@ -25,6 +25,7 @@ public class Correct : MonoBehaviour
         public static int keyDestroyCount = 0;
         public static bool incorrect = false;
         public static bool keyDestroyDone = false;
+        public static bool highlightIsCreated = false;
     }
     public void ButtonPress()
     {
@@ -108,6 +109,7 @@ public class Correct : MonoBehaviour
                 Audioplayer.correctSound();
             }
         }
+        Global.highlightIsCreated = false;
         Global.counters++;
     }
 
