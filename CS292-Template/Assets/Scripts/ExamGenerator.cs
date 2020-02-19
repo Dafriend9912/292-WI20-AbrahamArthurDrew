@@ -24,6 +24,7 @@ public class ExamGenerator : MonoBehaviour
 
     private void Update()
     {
+        print(Global.destroyCounters);
         if(Global.destroy == true && Global.destroyCounters == 10)
         {
             Global.destroy = false;
@@ -32,6 +33,7 @@ public class ExamGenerator : MonoBehaviour
             Global.examAnswers.Clear();
             ExamGenerate();
             Global.countdown++;
+            print("aaa");
         }
     }
 

@@ -63,8 +63,8 @@ public class PauseScript : MonoBehaviour
         time.active = false;
         TitleMenu.SetActive(true);
         time.time = 60;
+        Global.destroy = true;
         Global.counters = 6;
-        Global.destroy = false;
         Global.destroyCounters = 0;
         Global.totalDestroyer = true;
         Global.countdown = 0;
@@ -80,6 +80,8 @@ public class PauseScript : MonoBehaviour
         time.done = false;
         time.active = true;
         audio.playGamePlayAudio();
+        Global.counters = 1;
+        Global.destroyCounters = 0;
         keys.keyGenerate();
         exam.ExamGenerate();
 

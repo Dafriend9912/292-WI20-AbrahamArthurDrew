@@ -25,6 +25,7 @@ public class TimerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Global.counters);
         if (pause.isPaused == false && !done)
         {
             time -= Time.deltaTime;
