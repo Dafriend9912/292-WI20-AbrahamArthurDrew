@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6232315116919682069}
   - component: {fileID: 5256682267043120902}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4841976018536423618}
   - component: {fileID: 4170796405333086537}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ExitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 8708190989401871872}
   - component: {fileID: 2387251330173474393}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 3011433451485000350}
   - component: {fileID: 5479607278384805197}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PausedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 7233992941966432436}
   - component: {fileID: 7679685584791196722}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SFXButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 3270730648111427308}
   - component: {fileID: 8903759837209162368}
   m_Layer: 5
-  m_Name: Button
+  m_Name: MusicButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 8491078207382154951}
   - component: {fileID: 1988745473751669442}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PauseScreenPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 394076577242026576}
   - component: {fileID: 4634748764659714462}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PauseScreenImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 269768644084732851}
   - component: {fileID: 9116542250570064304}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ResumeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

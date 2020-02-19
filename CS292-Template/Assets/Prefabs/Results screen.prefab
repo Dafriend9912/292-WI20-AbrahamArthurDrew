@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7156699199207121706}
   - component: {fileID: 816193272101002467}
   m_Layer: 5
-  m_Name: Text (8)
+  m_Name: HighscoreNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 2081721354029722625}
   - component: {fileID: 637692366207782052}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PlayAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 3698922708168622660}
   - component: {fileID: 816193271571253060}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 8335214975225143221}
   - component: {fileID: 3048881168100570549}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlayAgainText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 2216459804497762773}
   - component: {fileID: 6662372177410448414}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ExitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 6968747059977531897}
   - component: {fileID: 816193272279693583}
   m_Layer: 5
-  m_Name: Text (7)
+  m_Name: Highscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 6371307972310614388}
   - component: {fileID: 1142163448619289604}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ResultScreenPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 5339681008864216778}
   - component: {fileID: 816193271509254699}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: ExamGradedNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 7649831692107849652}
   - component: {fileID: 529716932931508150}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: ExamGraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 5506032250932110244}
   - component: {fileID: 3081669730770015967}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ResultScreenImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 247245626390192586}
   - component: {fileID: 9211666477857817657}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GameFinished
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

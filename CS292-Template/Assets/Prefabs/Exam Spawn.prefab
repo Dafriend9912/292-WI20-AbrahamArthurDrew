@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3509467794183104854}
   - component: {fileID: 3509467794183104841}
+  - component: {fileID: 8695936144612837800}
   m_Layer: 0
   m_Name: Exam Spawn
   m_TagString: Untagged
@@ -299,6 +300,24 @@ MonoBehaviour:
   Prefab4: {fileID: 783857945446033459, guid: e3c83e55e444bb24493d9dc9c4d7d4b4, type: 3}
   Prefab5: {fileID: 6452493488562220619, guid: 7bc08ad54a6df984d841be98e7fdc0a0, type: 3}
   AnswerSkew: 50
+--- !u!114 &8695936144612837800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509467794183104840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a35ca94bb405542b02f27b6eac37da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highlight: {fileID: 0}
+  SpawnPosition1: {fileID: 0}
+  SpawnPosition2: {fileID: 0}
+  SpawnPosition3: {fileID: 0}
+  SpawnPosition4: {fileID: 0}
+  SpawnPosition5: {fileID: 0}
 --- !u!1 &3509467794346610463
 GameObject:
   m_ObjectHideFlags: 0

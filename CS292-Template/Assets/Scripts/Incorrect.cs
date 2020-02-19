@@ -93,6 +93,7 @@ public class Incorrect : MonoBehaviour
             }
         }
         Global.counters++;
+        Global.highlightIsCreated = false;
     }
 
     // Update is called once per frame
