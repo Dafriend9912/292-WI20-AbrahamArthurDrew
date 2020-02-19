@@ -18,12 +18,13 @@ public class ResultsMenu : MonoBehaviour
     public GameObject Exit;
     public GameObject titleScreen;
     public GameObject resultsScreen;
+    public KeyGenerator keys;
     public ExamGenerator examGenerator;
 
     // Start is called before the first frame update
     void Start()
     {
-        highestScore = 0;
+        highestScore = PlayerPrefs.GetFloat("HI-SCORE");
         resultsScreen.SetActive(false);
     }
 
@@ -45,6 +46,7 @@ public class ResultsMenu : MonoBehaviour
                     HiScoreText.text = "NEW HI-SCORE:";
                     highestScore = Score;
                     first = false;
+                    PlayerPrefs.SetFloat("HI-SCORE", highestScore);
                 }
                 else
                 {
@@ -62,9 +64,11 @@ public class ResultsMenu : MonoBehaviour
         timer.pause.isPaused = false;
         timer.done = false;
         timer.active = true;
-        Global.destroy = true;
-        Global.destroyCounters = 10;
         Global.totalDestroyer = true;
+        keys.keyGenerate();
+        Global.destroy = true;
+        Global.counters = 6;
+        Global.destroyCounters = 10;
         Debug.Log(Global.totalDestroyer);
         Global.countdown = -1;
         
@@ -75,6 +79,13 @@ public class ResultsMenu : MonoBehaviour
         titleScreen.SetActive(true);
         timer.active = false;
         timer.pause.isPaused = true;
+        timer.time = 60;
+        Global.counters = 6;
+        Global.destroy = false;
+        Global.destroyCounters = 0;
+        Global.totalDestroyer = true;
+        Global.countdown = 0;
+        
     }
 
 }
