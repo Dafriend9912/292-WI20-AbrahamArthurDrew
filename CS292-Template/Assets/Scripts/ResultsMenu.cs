@@ -20,6 +20,8 @@ public class ResultsMenu : MonoBehaviour
     public GameObject resultsScreen;
     public KeyGenerator keys;
     public ExamGenerator examGenerator;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +82,7 @@ public class ResultsMenu : MonoBehaviour
         timer.active = false;
         timer.pause.isPaused = true;
         timer.time = 60;
+        
         Global.counters = 6;
         Global.destroy = false;
         Global.destroyCounters = 0;

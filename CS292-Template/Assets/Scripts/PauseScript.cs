@@ -59,10 +59,11 @@ public class PauseScript : MonoBehaviour
 
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
-        isPaused = true;
+        isPaused = false;
         time.active = false;
         TitleMenu.SetActive(true);
         time.time = 60;
+        audio.stopGampPlayAudio();
         Global.destroy = true;
         Global.counters = 6;
         Global.destroyCounters = 0;
@@ -84,8 +85,6 @@ public class PauseScript : MonoBehaviour
         Global.destroyCounters = 0;
         keys.keyGenerate();
         exam.ExamGenerate();
-
-
         resultsScreen.SetActive(false);
     }
 
