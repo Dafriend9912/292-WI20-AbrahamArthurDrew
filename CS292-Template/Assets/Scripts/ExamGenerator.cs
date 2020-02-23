@@ -18,6 +18,8 @@ public class ExamGenerator : MonoBehaviour
     public GameObject Prefab4;
     public GameObject Prefab5;
     public int AnswerSkew = 80;
+    public Animator paper1;
+    public Animator paper2;
     void Start()
     { 
     }
@@ -31,8 +33,12 @@ public class ExamGenerator : MonoBehaviour
             Global.counters = 1;
             Global.destroyCounters = 0;
             Global.examAnswers.Clear();
-            ExamGenerate();
             Global.countdown++;
+            Global.counters = 1;
+            Global.moving = true;
+            paper1.Play("Moving paper");
+            paper2.Play("Moving on");
+            StartCoroutine(Coroutine());
             print("aaa");
         }
     }
@@ -41,7 +47,6 @@ public class ExamGenerator : MonoBehaviour
 
 
     public void ExamGenerate(){
-        Global.counters = 1;
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
@@ -103,5 +108,16 @@ public class ExamGenerator : MonoBehaviour
                 Global.examAnswers.Add(Global.answerKeys[4]);
             }
         }
+    }
+    public IEnumerator Coroutine()
+    {
+        yield return new WaitForSeconds(.5f);
+        ExamGenerate();
+        if (Global.incorrect = false)
+        {
+            Global.score += 25;
+            Global.incorrect = false;
+        }
+        Global.moving = false;
     }
 }
