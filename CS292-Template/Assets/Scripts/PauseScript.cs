@@ -15,7 +15,7 @@ public class PauseScript : MonoBehaviour
     public AudioScript audio;
     public KeyGenerator keys;
     public ExamGenerator exam;
-
+    public HighlightSpawn highlightSpawn;
 
 
     // Start is called before the first frame update
@@ -69,6 +69,7 @@ public class PauseScript : MonoBehaviour
         Global.destroyCounters = 0;
         Global.totalDestroyer = true;
         Global.countdown = 0;
+        Global.highlightIsCreated = true;
 
     }
 
@@ -85,6 +86,9 @@ public class PauseScript : MonoBehaviour
         Global.destroyCounters = 0;
         keys.keyGenerate();
         exam.ExamGenerate();
+        Global.highlightIsCreated = false;
+        highlightSpawn.SpawnHightlight();
+        
         resultsScreen.SetActive(false);
     }
 

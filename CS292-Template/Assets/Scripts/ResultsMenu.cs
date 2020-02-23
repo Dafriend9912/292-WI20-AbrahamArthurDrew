@@ -20,8 +20,7 @@ public class ResultsMenu : MonoBehaviour
     public GameObject resultsScreen;
     public KeyGenerator keys;
     public ExamGenerator examGenerator;
-    
-    
+    public HighlightSpawn highlightSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +71,9 @@ public class ResultsMenu : MonoBehaviour
         Global.counters = 6;
         Global.destroyCounters = 10;
         Debug.Log(Global.totalDestroyer);
-        Global.countdown = -1;
+        Global.countdown = -1;
+        Global.highlightIsCreated = false;
+        highlightSpawn.SpawnHightlight();
         
     }
     public void ExittoMenu()
@@ -88,7 +89,7 @@ public class ResultsMenu : MonoBehaviour
         Global.destroyCounters = 0;
         Global.totalDestroyer = true;
         Global.countdown = 0;
-        
+        Global.highlightIsCreated = true;
     }
 
 }
