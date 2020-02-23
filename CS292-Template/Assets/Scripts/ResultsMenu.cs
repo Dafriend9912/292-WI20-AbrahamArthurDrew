@@ -21,6 +21,7 @@ public class ResultsMenu : MonoBehaviour
     public KeyGenerator keys;
     public ExamGenerator examGenerator;
     public HighlightSpawn highlightSpawn;
+    public AudioScript audio;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,7 @@ public class ResultsMenu : MonoBehaviour
         Global.destroyCounters = 10;
         Debug.Log(Global.totalDestroyer);
         Global.countdown = -1;
+
         Global.highlightIsCreated = false;
         highlightSpawn.SpawnHightlight();
         
@@ -83,6 +85,7 @@ public class ResultsMenu : MonoBehaviour
         timer.active = false;
         timer.pause.isPaused = true;
         timer.time = 60;
+        audio.stopGampPlayAudio();
         Global.counters = 6;
         Global.destroy = false;
         Global.destroyCounters = 0;
