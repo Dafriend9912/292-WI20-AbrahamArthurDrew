@@ -330,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -132}
+  m_AnchoredPosition: {x: 0, y: -115}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576353737
@@ -666,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 33}
+  m_AnchoredPosition: {x: 0, y: 56}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958393914
@@ -1168,13 +1168,15 @@ PrefabInstance:
     - target: {fileID: 7014947220663828480, guid: ab76b8759712d4845894f9e6ba0e8fda,
         type: 3}
       propertyPath: m_Text
-      value: "Welcome to Knox Professor Simulator 2020! You as a professor at Knox
-        forgot to grade the multiple-choice section of the exam and have to grade
-        them as fast as possible before the class starts. \r\n\r\nTutorial:\nCompare
-        the exam with the answer key\r!\n\nIf the answer and key matches press the
-        correct button\r:\n\n\n\nIf the answer and key does not matches press the
-        incorrect button\r:\n\n\n\nEach answer graded falsely will receive a 2-second
-        penalty on the clock\r"
+      value: "Welcome to Knox Professor Simulator 2020! You, a professor at Knox forgot
+        to grade the multiple-choice section of the exam. Your goal is to grade them
+        as fast as possible before class starts. \r\n\r\nTutorial:\r\nCompare the
+        exam with the answer key\r!\r\n\r\nIf the answer and key matches press the
+        correct button\r:\r\n\r\n\r\n\r\nIf the answer and key does not matches press
+        the incorrect button\r:\r\n\r\n\r\n\r\nEach answer graded falsely will receive
+        a 2-second penalty on the clock\r\n\r\n\n\nIf the answer and key does not
+        matches press the incorrect button\r:\n\n\n\nEach answer graded falsely will
+        receive a 2-second penalty on the clock\r"
       objectReference: {fileID: 0}
     - target: {fileID: 7014947220663828480, guid: ab76b8759712d4845894f9e6ba0e8fda,
         type: 3}
