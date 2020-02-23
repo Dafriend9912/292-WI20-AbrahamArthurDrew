@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Correct;
 
 public class MusicToggle : MonoBehaviour
 {
@@ -14,12 +15,21 @@ public class MusicToggle : MonoBehaviour
         spriteChange = gameObject.GetComponent<Button>();
     }
 
+    private void Update()
+    {
+        if (Global.isMuted)
+        {
+            spriteChange.image.sprite = second;
+        }
+    }
+
     public void change(Sprite differentSprite)
     {
         if (spriteChange.image.sprite == first)
         {
             spriteChange.image.sprite = second;
         }
+    
         else
         {
             spriteChange.image.sprite = first;

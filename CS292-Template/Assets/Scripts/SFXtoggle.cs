@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Correct;
 
 public class SFXtoggle : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class SFXtoggle : MonoBehaviour
     void Start()
     {
         spriteChange = gameObject.GetComponent<Button>(); 
+    }
+    private void Update()
+    {
+        if (Global.MuteSfx)
+        {
+            spriteChange.image.sprite = second;
+        }
     }
 
     public void change(Sprite differentSprite)

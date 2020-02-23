@@ -30,6 +30,8 @@ public class Correct : MonoBehaviour
         public static bool keyDestroyDone = false;
         public static bool highlightIsCreated = false;
         public static bool moving = false;
+        public static bool MuteSfx = false;
+        public static bool isMuted = false;
     }
     public void ButtonPress()
     {
