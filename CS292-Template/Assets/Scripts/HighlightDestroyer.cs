@@ -11,10 +11,11 @@ public class HighlightDestroyer : MonoBehaviour
         
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        if (Global.highlightIsCreated == false)
+        if (Global.highlightIsCreated == true)
         {
             Destroy(gameObject);
         }
