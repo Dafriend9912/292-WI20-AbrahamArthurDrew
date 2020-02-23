@@ -13,87 +13,99 @@ public class Incorrect : MonoBehaviour
     public GameObject IncorrectPrefab;
     public TimerController time;
     public AudioScript Audioplayer;
-    
+
     // Start is called before the first frame update
     public void ButtonPress()
     {
-       
-        if (Global.counters == 1)
+        if (!Global.moving)
         {
-            Instantiate(IncorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
-            if (Global.examAnswers[0] == Global.answerKeys[0])
+            if (Global.counters == 1)
             {
-                Global.incorrectCounter++;
-                time.time -= 2;
-                Audioplayer.errorSound();
+                Instantiate(IncorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
+                if (Global.examAnswers[0] == Global.answerKeys[0])
+                {
+                    Global.incorrectCounter++;
+                    time.time -= 2;
+                    Global.incorrect = true;
+                    Audioplayer.errorSound();
+                }
+                else
+                {
+                    Audioplayer.correctSound();
+                    Global.score += 10;
+                }
             }
-            else
+            if (Global.counters == 2)
             {
-                Audioplayer.correctSound();
-            }
-        }
-        if (Global.counters == 2)
-        {
-            Instantiate(IncorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
-            if (Global.examAnswers[1] == Global.answerKeys[1])
-            {
-                Global.incorrectCounter++;
-                time.time -= 2;
-                Audioplayer.errorSound();
+                Instantiate(IncorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
+                if (Global.examAnswers[1] == Global.answerKeys[1])
+                {
+                    Global.incorrectCounter++;
+                    time.time -= 2;
+                    Global.incorrect = true;
+                    Audioplayer.errorSound();
 
+                }
+                else
+                {
+                    Audioplayer.correctSound();
+                    Global.score += 10;
+                }
             }
-            else
+            if (Global.counters == 3)
             {
-                Audioplayer.correctSound();
-            }
-        }
-        if (Global.counters == 3)
-        {
-            Instantiate(IncorrectPrefab, SpawnPosition3.position, SpawnPosition3.rotation);
-            if (Global.examAnswers[2] == Global.answerKeys[2])
-            {
-                Global.incorrectCounter++;
-                time.time -= 2;
-                Audioplayer.errorSound();
+                Instantiate(IncorrectPrefab, SpawnPosition3.position, SpawnPosition3.rotation);
+                if (Global.examAnswers[2] == Global.answerKeys[2])
+                {
+                    Global.incorrectCounter++;
+                    time.time -= 2;
+                    Global.incorrect = true;
+                    Audioplayer.errorSound();
 
+                }
+                else
+                {
+                    Audioplayer.correctSound();
+                    Global.score += 10;
+                }
             }
-            else
+            if (Global.counters == 4)
             {
-                Audioplayer.correctSound();
-            }
-        }
-        if (Global.counters == 4)
-        {
-            Instantiate(IncorrectPrefab, SpawnPosition4.position, SpawnPosition4.rotation);
-            if (Global.examAnswers[3] == Global.answerKeys[3])
-            {
-                Global.incorrectCounter++;
-                time.time -= 2;
-                Audioplayer.errorSound();
+                Instantiate(IncorrectPrefab, SpawnPosition4.position, SpawnPosition4.rotation);
+                if (Global.examAnswers[3] == Global.answerKeys[3])
+                {
+                    Global.incorrectCounter++;
+                    Global.incorrect = true;
+                    time.time -= 2;
+                    Audioplayer.errorSound();
 
+                }
+                else
+                {
+                    Audioplayer.correctSound();
+                    Global.score += 10;
+                }
             }
-            else
+            if (Global.counters == 5)
             {
-                Audioplayer.correctSound();
-            }
-        }
-        if (Global.counters == 5)
-        {
-            Instantiate(IncorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
-            if (Global.examAnswers[4] == Global.answerKeys[4])
-            {
-                Global.incorrectCounter++;
-                time.time -= 2;
-                Audioplayer.errorSound();
+                Instantiate(IncorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
+                if (Global.examAnswers[4] == Global.answerKeys[4])
+                {
+                    Global.incorrectCounter++;
+                    time.time -= 2;
+                    Global.incorrect = true;
+                    Audioplayer.errorSound();
 
+                }
+                else
+                {
+                    Audioplayer.correctSound();
+                    Global.score += 10;
+                }
             }
-            else
-            {
-                Audioplayer.correctSound();
-            }
+            Global.counters++;
+            Global.highlightIsCreated = false;
         }
-        Global.counters++;
-        Global.highlightIsCreated = false;
     }
 
     // Update is called once per frame

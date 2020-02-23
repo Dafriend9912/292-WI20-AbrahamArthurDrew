@@ -5,6 +5,7 @@ using static Correct;
 
 public class Destroyer : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Destroyer : MonoBehaviour
     {
         if(Global.counters == 6)
         {
+            
             Destroy(gameObject);
             Global.destroy = true;
             Global.destroyCounters++;

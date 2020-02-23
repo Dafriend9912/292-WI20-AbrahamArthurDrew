@@ -38,8 +38,8 @@ public class ResultsMenu : MonoBehaviour
         if (timer.done)
         {
             resultsScreen.SetActive(true);
-            Score = Global.countdown;
-            examsGraded.text = Global.countdown.ToString();
+            Score = Global.score;
+            examsGraded.text = Global.score.ToString();
                 if (highestScore < Score)
                 {
                     HiScore.text = Score.ToString();
