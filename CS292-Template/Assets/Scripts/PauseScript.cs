@@ -26,6 +26,7 @@ public class PauseScript : MonoBehaviour
         pauseMenu.SetActive(false);
         AboutScreen.SetActive(false);
         isPaused = true;
+        Global.isMuted = false;
     }
 
     // Update is called once per frame
