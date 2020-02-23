@@ -13,6 +13,7 @@ public class Incorrect : MonoBehaviour
     public GameObject IncorrectPrefab;
     public TimerController time;
     public AudioScript Audioplayer;
+    public GameObject Highlight;
 
     // Start is called before the first frame update
     public void ButtonPress()
@@ -21,6 +22,7 @@ public class Incorrect : MonoBehaviour
         {
             if (Global.counters == 1)
             {
+                Instantiate(Highlight, SpawnPosition2.position, SpawnPosition2.rotation);
                 Instantiate(IncorrectPrefab, SpawnPosition1.position, SpawnPosition1.rotation);
                 if (Global.examAnswers[0] == Global.answerKeys[0])
                 {
@@ -37,6 +39,7 @@ public class Incorrect : MonoBehaviour
             }
             if (Global.counters == 2)
             {
+                Instantiate(Highlight, SpawnPosition3.position, SpawnPosition3.rotation);
                 Instantiate(IncorrectPrefab, SpawnPosition2.position, SpawnPosition2.rotation);
                 if (Global.examAnswers[1] == Global.answerKeys[1])
                 {
@@ -54,6 +57,7 @@ public class Incorrect : MonoBehaviour
             }
             if (Global.counters == 3)
             {
+                Instantiate(Highlight, SpawnPosition4.position, SpawnPosition4.rotation);
                 Instantiate(IncorrectPrefab, SpawnPosition3.position, SpawnPosition3.rotation);
                 if (Global.examAnswers[2] == Global.answerKeys[2])
                 {
@@ -71,6 +75,7 @@ public class Incorrect : MonoBehaviour
             }
             if (Global.counters == 4)
             {
+                Instantiate(Highlight, SpawnPosition5.position, SpawnPosition5.rotation);
                 Instantiate(IncorrectPrefab, SpawnPosition4.position, SpawnPosition4.rotation);
                 if (Global.examAnswers[3] == Global.answerKeys[3])
                 {
@@ -88,6 +93,7 @@ public class Incorrect : MonoBehaviour
             }
             if (Global.counters == 5)
             {
+                Instantiate(Highlight, SpawnPosition1.position, SpawnPosition1.rotation);
                 Instantiate(IncorrectPrefab, SpawnPosition5.position, SpawnPosition5.rotation);
                 if (Global.examAnswers[4] == Global.answerKeys[4])
                 {
@@ -104,7 +110,6 @@ public class Incorrect : MonoBehaviour
                 }
             }
             Global.counters++;
-            Global.highlightIsCreated = false;
         }
     }
 

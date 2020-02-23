@@ -20,6 +20,7 @@ public class ExamGenerator : MonoBehaviour
     public int AnswerSkew = 80;
     public Animator paper1;
     public Animator paper2;
+    public GameObject Highlight;
     void Start()
     { 
     }
@@ -36,6 +37,7 @@ public class ExamGenerator : MonoBehaviour
             Global.countdown++;
             Global.counters = 1;
             Global.moving = true;
+            Global.highlightIsCreated = true;
             paper1.Play("Moving paper");
             paper2.Play("Moving on");
             StartCoroutine(Coroutine());
@@ -113,6 +115,8 @@ public class ExamGenerator : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         ExamGenerate();
+        Global.highlightIsCreated = false;
+        Instantiate(Highlight, SpawnPosition1.position, SpawnPosition1.rotation);
         if (Global.incorrect == false)
         {
             Global.score += 25;
