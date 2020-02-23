@@ -20,6 +20,7 @@ public class KeyGenerator : MonoBehaviour
     {
     }
     public void keyGenerate() {
+        Global.answerKeys.Clear();
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
