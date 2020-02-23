@@ -83,6 +83,7 @@ public class ResultsMenu : MonoBehaviour
         timer.active = false;
         timer.pause.isPaused = true;
         timer.time = 60;
+        
         Global.counters = 6;
         Global.destroy = false;
         Global.destroyCounters = 0;

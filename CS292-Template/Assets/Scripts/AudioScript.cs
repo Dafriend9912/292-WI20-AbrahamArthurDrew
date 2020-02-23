@@ -29,6 +29,7 @@ public class AudioScript : MonoBehaviour
     public void mute()
     {
         AudioListener.pause = !AudioListener.pause;
+        
     }
 
     public void muteSfx()
@@ -56,8 +57,17 @@ public class AudioScript : MonoBehaviour
                audio.PlayOneShot(titleAudio);  
     }
 
+    public void stopGampPlayAudio()
+    {
+        audio.Stop();
+    }   
+
     public void playGamePlayAudio()
     {
         audio.PlayOneShot(gamePlayAudio);
     }
+
+ 
+
+
     }
