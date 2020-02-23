@@ -113,7 +113,7 @@ public class ExamGenerator : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         ExamGenerate();
-        if (Global.incorrect = false)
+        if (Global.incorrect == false)
         {
             Global.score += 25;
             Global.incorrect = false;
