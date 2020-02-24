@@ -21,11 +21,15 @@ public class MusicToggle : MonoBehaviour
         {
             spriteChange.image.sprite = second;
         }
+        else
+        {
+            spriteChange.image.sprite = first;
+        }
     }
 
     public void change(Sprite differentSprite)
     {
-        if (spriteChange.image.sprite == first)
+        if (spriteChange.image.sprite == first )
         {
             spriteChange.image.sprite = second;
         }

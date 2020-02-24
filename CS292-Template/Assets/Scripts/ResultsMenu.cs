@@ -21,8 +21,8 @@ public class ResultsMenu : MonoBehaviour
     public KeyGenerator keys;
     public ExamGenerator examGenerator;
     public HighlightSpawn highlightSpawn;
-    public AudioScript audio;
-
+    public gamePlayMusic audio1;
+    public TitleSound audio2;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +85,11 @@ public class ResultsMenu : MonoBehaviour
         timer.active = false;
         timer.pause.isPaused = true;
         timer.time = 60;
-        audio.stopGampPlayAudio();
+        audio1.stopGamePlayAudio();
+        if (!Global.isMuted)
+        {
+            audio2.playTitleAudio();
+        }
         Global.counters = 6;
         Global.destroy = false;
         Global.destroyCounters = 0;

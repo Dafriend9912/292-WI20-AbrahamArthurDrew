@@ -20,6 +20,10 @@ public class SFXtoggle : MonoBehaviour
         {
             spriteChange.image.sprite = second;
         }
+        else
+        {
+            spriteChange.image.sprite = first;
+        }
     }
 
     public void change(Sprite differentSprite)
