@@ -12,28 +12,34 @@ public class PauseScript : MonoBehaviour
     public GameObject resultsScreen;
     public bool isPaused;
     public TimerController time;
-    public AudioScript audio;
+    //public AudioScript audio;
     public KeyGenerator keys;
     public ExamGenerator exam;
     public HighlightSpawn highlightSpawn;
+    public gamePlayMusic audio1;
+    public TitleSound audio2;
 
 
     // Start is called before the first frame update
     void Start()
     {
         TitleMenu.SetActive(true);
-        audio.playTitleAudio();
+        //audio.playTitleAudio();
         pauseMenu.SetActive(false);
         AboutScreen.SetActive(false);
         isPaused = true;
-        Global.isMuted = false;
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
+        if (Global.isMuted)
+        {
+            audio2.stopTitleAudio();
+        }
 
     }
     public void PauseGame()
@@ -64,14 +70,18 @@ public class PauseScript : MonoBehaviour
         time.active = false;
         TitleMenu.SetActive(true);
         time.time = 60;
-        audio.stopGampPlayAudio();
+        //audio.stopGampPlayAudio();
+        audio1.stopGamePlayAudio();
         Global.destroy = true;
         Global.counters = 6;
         Global.destroyCounters = 0;
         Global.totalDestroyer = true;
         Global.countdown = 0;
         Global.highlightIsCreated = true;
-
+        if (!Global.isMuted)
+        {
+            audio2.playTitleAudio();
+        }
     }
 
     public void PlayGame()
@@ -82,7 +92,15 @@ public class PauseScript : MonoBehaviour
         isPaused = false;
         time.done = false;
         time.active = true;
-        audio.playGamePlayAudio();
+        //audio.playGamePlayAudio();
+
+        if (!Global.isMuted)
+        {
+            audio1.playGamePlayAudio();
+        }
+
+        audio2.stopTitleAudio();
+
         Global.counters = 1;
         Global.destroyCounters = 0;
         keys.keyGenerate();
