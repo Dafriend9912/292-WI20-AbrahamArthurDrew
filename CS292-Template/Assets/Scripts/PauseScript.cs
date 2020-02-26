@@ -40,7 +40,7 @@ public class PauseScript : MonoBehaviour
         {
             audio2.stopTitleAudio();
         }
-        if (TitleMenu.activeInHierarchy == true)
+        if(TitleMenu.activeInHierarchy == true)
         {
             audio1.stopGamePlayAudio();
         }
