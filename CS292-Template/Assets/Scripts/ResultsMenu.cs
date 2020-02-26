@@ -61,6 +61,7 @@ public class ResultsMenu : MonoBehaviour
 
     public void Replay()
     {
+        Global.dontSpawnForTheLoveOfGod = false;
         resultsScreen.SetActive(false);
         timer.time = 60;
         timer.pause.isPaused = false;
@@ -77,6 +78,7 @@ public class ResultsMenu : MonoBehaviour
         Global.countdown = -1;
         Global.highlightIsCreated = false;
         highlightSpawn.SpawnHightlight();
+        Global.score = 0;
         
     }
     public void ExittoMenu()
@@ -97,6 +99,7 @@ public class ResultsMenu : MonoBehaviour
         Global.totalDestroyer = true;
         Global.countdown = 0;
         Global.highlightIsCreated = true;
+        Global.score = 0;
     }
 
 }

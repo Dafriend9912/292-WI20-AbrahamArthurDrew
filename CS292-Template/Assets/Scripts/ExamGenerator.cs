@@ -38,6 +38,14 @@ public class ExamGenerator : MonoBehaviour
             Global.counters = 1;
             Global.moving = true;
             Global.highlightIsCreated = true;
+            if (Global.incorrect == false)
+            {
+                Global.score += 250;
+            }
+            else
+            {
+                Global.incorrect = false;
+            }
             paper1.Play("Moving paper");
             paper2.Play("Moving on");
             StartCoroutine(Coroutine());
@@ -57,57 +65,60 @@ public class ExamGenerator : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            int prefabIndex = UnityEngine.Random.Range(0, 5);
-            int skew = UnityEngine.Random.Range(0, 100);
-            if (i == 0 && skew >= AnswerSkew)
+            if (!Global.dontSpawnForTheLoveOfGod == true)
             {
-                Instantiate(prefabList[prefabIndex], SpawnPosition1.position, SpawnPosition1.rotation);
-                Global.examAnswers.Add(prefabIndex);
-            }
-            if (i == 1 && skew >= AnswerSkew)
-            {
-                Instantiate(prefabList[prefabIndex], SpawnPosition2.position, SpawnPosition2.rotation);
-                Global.examAnswers.Add(prefabIndex);
-            }
-            if (i == 2 && skew >= AnswerSkew)
-            {
-                Instantiate(prefabList[prefabIndex], SpawnPosition3.position, SpawnPosition3.rotation);
-                Global.examAnswers.Add(prefabIndex);
-            }
-            if (i == 3 && skew >= AnswerSkew)
-            {
-                Instantiate(prefabList[prefabIndex], SpawnPosition4.position, SpawnPosition4.rotation);
-                Global.examAnswers.Add(prefabIndex);
-            }
-            if (i == 4 && skew >= AnswerSkew)
-            {
-                Instantiate(prefabList[prefabIndex], SpawnPosition5.position, SpawnPosition5.rotation);
-                Global.examAnswers.Add(prefabIndex);
-            }
-            if (i == 0 && skew < AnswerSkew)
-            {
-                Instantiate(prefabList[Global.answerKeys[0]], SpawnPosition1.position, SpawnPosition1.rotation);
-                Global.examAnswers.Add(Global.answerKeys[0]);
-            }
-            if (i == 1 && skew < AnswerSkew)
-            {
-                Instantiate(prefabList[Global.answerKeys[1]], SpawnPosition2.position, SpawnPosition2.rotation);
-                Global.examAnswers.Add(Global.answerKeys[1]);
-            }
-            if (i == 2 && skew < AnswerSkew)
-            {
-                Instantiate(prefabList[Global.answerKeys[2]], SpawnPosition3.position, SpawnPosition3.rotation);
-                Global.examAnswers.Add(Global.answerKeys[2]);
-            }
-            if (i == 3 && skew < AnswerSkew)
-            {
-                Instantiate(prefabList[Global.answerKeys[3]], SpawnPosition4.position, SpawnPosition4.rotation);
-                Global.examAnswers.Add(Global.answerKeys[3]);
-            }
-            if (i == 4 && skew < AnswerSkew)
-            {
-                Instantiate(prefabList[Global.answerKeys[4]], SpawnPosition5.position, SpawnPosition5.rotation);
-                Global.examAnswers.Add(Global.answerKeys[4]);
+                int prefabIndex = UnityEngine.Random.Range(0, 5);
+                int skew = UnityEngine.Random.Range(0, 100);
+                if (i == 0 && skew >= AnswerSkew)
+                {
+                    Instantiate(prefabList[prefabIndex], SpawnPosition1.position, SpawnPosition1.rotation);
+                    Global.examAnswers.Add(prefabIndex);
+                }
+                if (i == 1 && skew >= AnswerSkew)
+                {
+                    Instantiate(prefabList[prefabIndex], SpawnPosition2.position, SpawnPosition2.rotation);
+                    Global.examAnswers.Add(prefabIndex);
+                }
+                if (i == 2 && skew >= AnswerSkew)
+                {
+                    Instantiate(prefabList[prefabIndex], SpawnPosition3.position, SpawnPosition3.rotation);
+                    Global.examAnswers.Add(prefabIndex);
+                }
+                if (i == 3 && skew >= AnswerSkew)
+                {
+                    Instantiate(prefabList[prefabIndex], SpawnPosition4.position, SpawnPosition4.rotation);
+                    Global.examAnswers.Add(prefabIndex);
+                }
+                if (i == 4 && skew >= AnswerSkew)
+                {
+                    Instantiate(prefabList[prefabIndex], SpawnPosition5.position, SpawnPosition5.rotation);
+                    Global.examAnswers.Add(prefabIndex);
+                }
+                if (i == 0 && skew < AnswerSkew)
+                {
+                    Instantiate(prefabList[Global.answerKeys[0]], SpawnPosition1.position, SpawnPosition1.rotation);
+                    Global.examAnswers.Add(Global.answerKeys[0]);
+                }
+                if (i == 1 && skew < AnswerSkew)
+                {
+                    Instantiate(prefabList[Global.answerKeys[1]], SpawnPosition2.position, SpawnPosition2.rotation);
+                    Global.examAnswers.Add(Global.answerKeys[1]);
+                }
+                if (i == 2 && skew < AnswerSkew)
+                {
+                    Instantiate(prefabList[Global.answerKeys[2]], SpawnPosition3.position, SpawnPosition3.rotation);
+                    Global.examAnswers.Add(Global.answerKeys[2]);
+                }
+                if (i == 3 && skew < AnswerSkew)
+                {
+                    Instantiate(prefabList[Global.answerKeys[3]], SpawnPosition4.position, SpawnPosition4.rotation);
+                    Global.examAnswers.Add(Global.answerKeys[3]);
+                }
+                if (i == 4 && skew < AnswerSkew)
+                {
+                    Instantiate(prefabList[Global.answerKeys[4]], SpawnPosition5.position, SpawnPosition5.rotation);
+                    Global.examAnswers.Add(Global.answerKeys[4]);
+                }
             }
         }
     }
@@ -117,11 +128,6 @@ public class ExamGenerator : MonoBehaviour
         ExamGenerate();
         Global.highlightIsCreated = false;
         Instantiate(Highlight, SpawnPosition1.position, SpawnPosition1.rotation);
-        if (Global.incorrect == false)
-        {
-            Global.score += 25;
-            Global.incorrect = false;
-        }
         Global.moving = false;
     }
 }

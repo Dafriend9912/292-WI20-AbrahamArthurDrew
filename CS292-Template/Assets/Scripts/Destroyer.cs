@@ -15,7 +15,7 @@ public class Destroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Global.counters == 6)
+        if(Global.counters >= 6)
         {
             
             Destroy(gameObject);

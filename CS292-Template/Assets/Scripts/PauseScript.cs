@@ -82,10 +82,12 @@ public class PauseScript : MonoBehaviour
         {
             audio2.playTitleAudio();
         }
+        Global.score = 0;
     }
 
     public void PlayGame()
     {
+        Global.dontSpawnForTheLoveOfGod = false;
         Time.timeScale = 1f;
         TitleMenu.SetActive(false);
         pauseMenu.SetActive(false);

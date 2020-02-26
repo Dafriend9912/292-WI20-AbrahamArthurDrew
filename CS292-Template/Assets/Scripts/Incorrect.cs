@@ -27,14 +27,22 @@ public class Incorrect : MonoBehaviour
                 if (Global.examAnswers[0] == Global.answerKeys[0])
                 {
                     Global.incorrectCounter++;
-                    time.time -= 2;
+                    if (time.time > 2)
+                    {
+                        time.time -= 2;
+                    }
+                    else
+                    {
+                        time.time = .01f;
+                        Global.dontSpawnForTheLoveOfGod = true;
+                    }
                     Global.incorrect = true;
                     Audioplayer.errorSound();
                 }
                 else
                 {
                     Audioplayer.correctSound();
-                    Global.score += 10;
+                    Global.score += 50;
                 }
             }
             if (Global.counters == 2)
@@ -44,7 +52,15 @@ public class Incorrect : MonoBehaviour
                 if (Global.examAnswers[1] == Global.answerKeys[1])
                 {
                     Global.incorrectCounter++;
-                    time.time -= 2;
+                    if (time.time > 2)
+                    {
+                        time.time -= 2;
+                    }
+                    else
+                    {
+                        time.time = .01f;
+                        Global.dontSpawnForTheLoveOfGod = true;
+                    }
                     Global.incorrect = true;
                     Audioplayer.errorSound();
 
@@ -52,7 +68,7 @@ public class Incorrect : MonoBehaviour
                 else
                 {
                     Audioplayer.correctSound();
-                    Global.score += 10;
+                    Global.score += 50;
                 }
             }
             if (Global.counters == 3)
@@ -62,7 +78,15 @@ public class Incorrect : MonoBehaviour
                 if (Global.examAnswers[2] == Global.answerKeys[2])
                 {
                     Global.incorrectCounter++;
-                    time.time -= 2;
+                    if (time.time > 2)
+                    {
+                        time.time -= 2;
+                    }
+                    else
+                    {
+                        time.time = .01f;
+                        Global.dontSpawnForTheLoveOfGod = true;
+                    }
                     Global.incorrect = true;
                     Audioplayer.errorSound();
 
@@ -70,7 +94,7 @@ public class Incorrect : MonoBehaviour
                 else
                 {
                     Audioplayer.correctSound();
-                    Global.score += 10;
+                    Global.score += 50;
                 }
             }
             if (Global.counters == 4)
@@ -81,14 +105,22 @@ public class Incorrect : MonoBehaviour
                 {
                     Global.incorrectCounter++;
                     Global.incorrect = true;
-                    time.time -= 2;
+                    if (time.time > 2)
+                    {
+                        time.time -= 2;
+                    }
+                    else
+                    {
+                        time.time = .01f;
+                        Global.dontSpawnForTheLoveOfGod = true;
+                    }
                     Audioplayer.errorSound();
 
                 }
                 else
                 {
                     Audioplayer.correctSound();
-                    Global.score += 10;
+                    Global.score += 50;
                 }
             }
             if (Global.counters == 5)
@@ -98,7 +130,15 @@ public class Incorrect : MonoBehaviour
                 if (Global.examAnswers[4] == Global.answerKeys[4])
                 {
                     Global.incorrectCounter++;
-                    time.time -= 2;
+                    if (time.time > 2)
+                    {
+                        time.time -= 2;
+                    }
+                    else
+                    {
+                        time.time = .01f;
+                        Global.dontSpawnForTheLoveOfGod = true;
+                    }
                     Global.incorrect = true;
                     Audioplayer.errorSound();
 
@@ -106,7 +146,7 @@ public class Incorrect : MonoBehaviour
                 else
                 {
                     Audioplayer.correctSound();
-                    Global.score += 10;
+                    Global.score += 50;
                 }
             }
             Global.counters++;
