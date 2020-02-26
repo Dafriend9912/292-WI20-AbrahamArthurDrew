@@ -72,7 +72,8 @@ public class ResultsMenu : MonoBehaviour
         Global.counters = 6;
         Global.destroyCounters = 10;
         Debug.Log(Global.totalDestroyer);
-
+        audio1.stopGamePlayAudio();
+        audio1.playGamePlayAudio();
         Global.countdown = -1;
         Global.highlightIsCreated = false;
         highlightSpawn.SpawnHightlight();
