@@ -62,24 +62,21 @@ public class ResultsMenu : MonoBehaviour
     public void Replay()
     {
         Global.dontSpawnForTheLoveOfGod = false;
-        resultsScreen.SetActive(false);
         timer.time = 60;
-        timer.pause.isPaused = false;
-        timer.done = false;
-        timer.active = true;
         Global.totalDestroyer = true;
         keys.keyGenerate();
         Global.destroy = true;
         Global.counters = 6;
         Global.destroyCounters = 10;
         Debug.Log(Global.totalDestroyer);
-        audio1.stopGamePlayAudio();
-        audio1.playGamePlayAudio();
         Global.countdown = -1;
         Global.highlightIsCreated = false;
         highlightSpawn.SpawnHightlight();
         Global.score = 0;
-        
+        timer.pause.isPaused = false;
+        timer.done = false;
+        timer.active = true;
+        resultsScreen.SetActive(false);
     }
     public void ExittoMenu()
     {
@@ -101,5 +98,4 @@ public class ResultsMenu : MonoBehaviour
         Global.highlightIsCreated = true;
         Global.score = 0;
     }
-
 }

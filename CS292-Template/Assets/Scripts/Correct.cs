@@ -33,6 +33,7 @@ public class Correct : MonoBehaviour
         public static bool MuteSfx = false;
         public static bool isMuted = false;
         public static bool dontSpawnForTheLoveOfGod = false;
+        public static bool firstPlay = false;
     }
     public void ButtonPress()
     {

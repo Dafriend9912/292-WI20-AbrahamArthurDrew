@@ -27,7 +27,6 @@ public class ExamGenerator : MonoBehaviour
 
     private void Update()
     {
-        print(Global.destroyCounters);
         if(Global.destroy == true && Global.destroyCounters == 10)
         {
             Global.destroy = false;

@@ -28,8 +28,9 @@ public class PauseScript : MonoBehaviour
         pauseMenu.SetActive(false);
         AboutScreen.SetActive(false);
         isPaused = true;
-        
-        
+
+
+
     }
 
     // Update is called once per frame
@@ -91,13 +92,23 @@ public class PauseScript : MonoBehaviour
 
     public void PlayGame()
     {
-        Global.dontSpawnForTheLoveOfGod = false;
-        Time.timeScale = 1f;
-        TitleMenu.SetActive(false);
-        pauseMenu.SetActive(false);
-        isPaused = false;
-        time.done = false;
-        time.active = true;
+        if (PlayerPrefs.GetFloat("HI-SCORE") == 0)
+        {
+            TitleMenu.SetActive(false);
+            pauseMenu.SetActive(false);
+            AboutScreen.SetActive(true);
+            Global.firstPlay = true;
+        }
+        else
+        {
+            Global.dontSpawnForTheLoveOfGod = false;
+            Time.timeScale = 1f;
+            TitleMenu.SetActive(false);
+            pauseMenu.SetActive(false);
+            isPaused = false;
+            time.done = false;
+            time.active = true;
+        }
         //audio.playGamePlayAudio();
 
         if (!Global.isMuted)
@@ -132,8 +143,20 @@ public class PauseScript : MonoBehaviour
 
     public void CloseAbout()
     {
-        Time.timeScale = 0f;
-        AboutScreen.SetActive(false);
+        if (Global.firstPlay == true)
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
+            time.done = false;
+            time.active = true;
+            AboutScreen.SetActive(false);
+            Global.firstPlay = false;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            AboutScreen.SetActive(false);
+        }
         
     }
 }

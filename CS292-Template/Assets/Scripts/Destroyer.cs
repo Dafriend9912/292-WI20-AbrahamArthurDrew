@@ -21,7 +21,6 @@ public class Destroyer : MonoBehaviour
             Destroy(gameObject);
             Global.destroy = true;
             Global.destroyCounters++;
-            print("done");
         }
     }
 }
