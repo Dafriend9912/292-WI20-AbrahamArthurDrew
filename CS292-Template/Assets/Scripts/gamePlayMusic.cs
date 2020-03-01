@@ -13,7 +13,7 @@ public class gamePlayMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Global.isMuted = false;
+        //Global.isMuted = false;
     }
 
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class gamePlayMusic : MonoBehaviour
 
     public void stopGamePlayAudio()
     {
-        audio1.Stop();
+        audio1.Pause();
         //Global.isMuted = true;
     }
 

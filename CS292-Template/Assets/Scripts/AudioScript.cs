@@ -54,21 +54,12 @@ public class AudioScript : MonoBehaviour
         if (!Global.MuteSfx)
             audio.PlayOneShot(correctAudio);
     }
-    public void playTitleAudio()
-    {
-               audio.PlayOneShot(titleAudio);  
-    }
-
-    //public void stopGampPlayAudio()
+    //public void playTitleAudio()
     //{
-    //    audio.Stop();
-    //}   
-
-    //public void playGamePlayAudio()
-    //{
-        //audio.PlayOneShot(gamePlayAudio);
+    //           audio.PlayOneShot(titleAudio);  
     //}
 
+   
  
 
 

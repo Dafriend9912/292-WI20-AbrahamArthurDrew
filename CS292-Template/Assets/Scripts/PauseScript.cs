@@ -24,10 +24,10 @@ public class PauseScript : MonoBehaviour
     void Start()
     {
         TitleMenu.SetActive(true);
-        //audio.playTitleAudio();
         pauseMenu.SetActive(false);
         AboutScreen.SetActive(false);
         isPaused = true;
+        audio2.playTitleAudio();
         
         
     }
@@ -36,15 +36,13 @@ public class PauseScript : MonoBehaviour
     void Update()
     {
 
-        if (Global.isMuted)
-        {
-            audio2.stopTitleAudio();
-        }
-        if(TitleMenu.activeInHierarchy == true)
+       
+        if (TitleMenu.activeInHierarchy == true)
         {
             audio1.stopGamePlayAudio();
         }
-
+       
+        
     }
     public void PauseGame()
     {
